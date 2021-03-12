@@ -1,0 +1,39 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap Min CSS -->
+		<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+		<!-- IcoFont Min CSS -->
+		<link rel="stylesheet" href="{% static 'assets/css/icofont.min.css' %}">
+		<!-- Meanmenu Min CSS -->
+		<link rel="stylesheet" href="{% static 'assets/css/meanmenu.css' %}">
+		<!-- Magnific Popup Min CSS -->
+		<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+		<!-- Owl Carousel Min CSS -->
+		<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+		<!-- NiceSelect Min CSS -->
+		<link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+		<!-- Style CSS -->
+		<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+		<!-- Responsive CSS -->
+		<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+		<title>{% block title %}شرکت آوا دام دارو{% endblock %}</title>
+
+		<link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png' %}">
+	</head>
+{% include 'AvadamConfig/Header.html' %}
+{% block content %}
+
+{% endblock %}
+
+
+		{% include 'AvadamConfig/Footer.html' %}
+</html>

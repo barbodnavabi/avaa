@@ -1,0 +1,197 @@
+{% extends 'AvadamConfig/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+		<!-- Start Marketing Main Banner -->
+		<div class="main-banner marketing-home">
+			<div class="d-table">
+				<div class="d-table-cell">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 col-md-12">
+								<div class="hero-content">
+
+									<h1>{% translate "شرکت سراسری آوا دام دارو " %}</h1>
+								<p>{% translate "شرکت سراسری آوا دام دارو در استان مرکزی ایران به فعالیت خود شروع کرده و در استان های بسیاری نمایندگی دارو های خود را دارد " %}</p>
+
+                                    <a href="{% url 'agents' %}" class="btn btn-primary">{% translate "نمایندگان ما " %}</a>
+
+								</div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+								<div class="marketing-image">
+									<img src="{% static 'assets/img/marketing-shape/marketing-img1.png'%}" class="wow fadeInDown" data-wow-delay="0.4s" alt="img">
+									<img src="{% static 'assets/img/marketing-shape/marketing-img2.png'%}" class="wow fadeInLeft" data-wow-delay="0.4s" alt="img">
+									<img src="{% static 'assets/img/marketing-shape/marketing-img3.png'%}" class="wow lightSpeedIn" data-wow-delay="0.4s" alt="img">
+									<img src="{% static 'assets/img/marketing-shape/marketing-img4.png'%}" class="wow rollIn" data-wow-delay="0.4s" alt="img">
+									<img src="{% static 'assets/img/marketing-shape/marketing-img5.png'%}" class="wow fadeInUp" data-wow-delay="0.4s" alt="img">
+									<img src="{% static 'assets/img/marketing-shape/marketing-img6.png'%}" class="wow fadeInDown" data-wow-delay="0.4s" alt="img">
+									<img src="{% static 'assets/img/marketing-shape/marketing-img7.png'%}" class="wow flip" data-wow-delay="0.4s" alt="img">
+									<img src="{% static 'assets/img/marketing-shape/marketing-img8.png'%}" class="wow zoomIn" data-wow-delay="0.4s" alt="img">
+									<img src="{% static 'assets/img/shape6.png'%}" alt="img">
+									<img src="{% static 'assets/img/marketing-shape/marketing-img9.png'%}" class="wow fadeInUp" data-wow-delay="0.4s" alt="img">
+									<img src="{% static 'assets/img/marketing-shape/marketing-img10.png'%}" class="wow fadeInUp" data-wow-delay="0.4s" alt="img">
+									<img src="{% static 'assets/img/marketing-shape/marketing-img11.png'%}" class="wow flip" data-wow-delay="0.4s" alt="img">
+									<img src="{% static 'assets/img/marketing-shape/marketing-img12.png'%}" class="wow lightSpeedIn" data-wow-delay="0.4s" alt="img">
+
+									<img src="{% static 'assets/img/marketing-shape/main-image.png' %}" class="wow fadeInUp" data-wow-delay="0.4s" alt="img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="bg-gray shape-1"></div>
+			<div class="shape1"><img src="{% static 'assets/img/shape1.png'%}" alt="img"></div>
+			<div class="shape2"><img src="{% static 'assets/img/shape2.png'%}" alt="img"></div>
+			<div class="shape3"><img src="{% static 'assets/img/shape3.png'%}" alt="img"></div>
+			<div class="shape6"><img src="{% static 'assets/img/shape6.png'%}" alt="img"></div>
+			<div class="shape8 rotateme"><img src="{% static 'assets/img/shape8.svg'%}" alt="shape"></div>
+            <div class="shape9"><img src="{% static 'assets/img/shape9.svg'%}" alt="shape"></div>
+
+            <!-- Bubble Animte -->
+            <div class="bubble-animate">
+                <div class="circle small square1"></div>
+                <div class="circle small square2"></div>
+                <div class="circle small square3"></div>
+                <div class="circle small square4"></div>
+                <div class="circle small square5"></div>
+                <div class="circle medium square1"></div>
+                <div class="circle medium square2"></div>
+                <div class="circle medium square3"></div>
+                <div class="circle medium square4"></div>
+                <div class="circle medium square5"></div>
+                <div class="circle large square1"></div>
+                <div class="circle large square2"></div>
+                <div class="circle large square3"></div>
+                <div class="circle large square4"></div>
+            </div>
+		</div>
+        <!-- End Marketing Main Banner -->
+
+        <!-- Start Partner Area -->
+		<div class="partner-area marketing-partner">
+			<div class="container">
+				<div class="row">
+					<div class="partner-slides">
+					{% for brand in brands %}
+						<div class="col-lg-12">
+							<div class="item">
+							{% if brand.image %}
+								<a href="{{brand.image.url}}"><img src="{{brand.image.url}}" alt="{{brand.title}}"></a>
+							{% endif %}
+							</div>
+						</div>
+					{% endfor %}
+
+					</div>
+				</div>
+            </div>
+		</div>
+		<!-- End Partner Area -->
+
+		<!-- Start App Funfacts Area -->
+		<section class="app-funfacts-area ptb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						<div class="single-funfact-box">
+							<div class="icon">
+								<i class="icofont-users-alt-5"></i>
+							</div>
+							<h3><span class="count">35</span>+</h3>
+							<p>{% translate 'نمایندگان ما' %}</p>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-6">
+						<div class="single-funfact-box">
+							<div class="icon">
+								<i class="icofont-users-alt-1"></i>
+							</div>
+							<h3><span class="count">4</span>+</h3>
+							<p>{% translate 'برند های ما' %}</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- End App Funfacts Area -->
+
+		<!-- Start Blog Area -->
+		<section class="blog-area ptb-100">
+			<div class="container">
+				<div class="section-title">
+					<h2>{% translate 'آخرین مقالات و اخبار ما' %}</h2>
+					<div class="bar"></div>
+					<p>{% translate 'شرکت آوا دام دارو همواره در تلاش است تا مطالبی کاربردی برای شما عزیزان منتشر کند' %}</p>
+				</div>
+
+				<div class="row">
+					<div class="blog-slides">
+                        {% for article in articles %}
+                        <div class="col-lg-12 col-md-12">
+                            <div class="single-blog-post">
+                                {% if article.thumbnail %}
+                                <a href="{% url 'blog-detail' article.slug %}" class="post-image"><img src="{{ article.thumbnail.url }}" alt="{{ article.title }}" width="200px" height="200px"></a>
+                                {% endif %}
+
+                                <div class="blog-post-content">
+                                    <ul>
+                                        <li><i class="icofont-user-male"></i> <a href="#">{{ article.author }}</a></li>
+                                        <li><i class="icofont-wall-clock"></i> {{ article.publish }}</li>
+                                    </ul>
+                                    <h3><a href="#">{{ article.title }}</a></h3>
+                                    <p>{{ article.description|truncatewords:'15'|safe|striptags }}</p>
+                                    <a href="{% url 'blog-detail' article.slug %}" class="read-more-btn">{% translate 'برو به مطلب' %} <i class="icofont-rounded-double-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+				</div>
+			</div>
+		</section>
+		<!-- End Blog Area -->
+
+		<!-- Start Feedback Area -->
+		<section class="feedback-area ptb-100 bg-gray">
+			<div class="container">
+				<div class="section-title">
+					<h2>{% translate 'نماینده های ما' %}</h2>
+					<div class="bar"></div>
+					<p>{% translate ' نمایندگان آوادام دارو در استان های ایران  ' %}</p>
+				</div>
+
+				<div class="row">
+					<div class="feedback-slides">
+                        {% for agent in agents %}
+						<div class="col-lg-12">
+							<div class="single-feedback-box">
+								<div class="client-info">
+                                    {% if agent.image %}
+									<img src="{{ agent.image.url }}" alt="{{ agent.name }}">
+                                    {% endif %}
+									<a href='{% url 'agent-detail' agent.id %}'><h3>{{ agent.company }}</h3></a>
+									<span>{{ agent.name }}</span>
+								</div>
+								<p>{{ agent.description|truncatewords:'18' }}</p>
+							</div>
+						</div>
+                        {% endfor %}
+					</div>
+				</div>
+			</div>
+
+			<svg class="svg-feedback-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path d="M0,70 C30,130 70,50 100,70 L100,100 0,100 Z" fill="#ffffff"/>
+			</svg>
+		</section>
+		<!-- End Feedback Area -->
+
+
+{% endblock %}

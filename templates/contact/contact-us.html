@@ -1,0 +1,80 @@
+{% extends 'AvadamConfig/base.html' %}
+{% load crispy_forms_filters  %}
+{% load i18n %}
+{% block title %}
+تماس و درباره ما
+{% endblock %}
+{% block content %}
+<section class="contact-info-area ptb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-info-box">
+                            <div class="icon">
+                                <i class="icofont-email"></i>
+                            </div>
+                            <h3>{% translate 'ایمیل ما'%}</h3>
+                            <p><a href="mailito:avadamdaroo@avadamdaroo.com">avadamdaroo@avadamdaroo.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-info-box">
+                            <div class="icon">
+                                <i class="icofont-google-map"></i>
+                            </div>
+                            <h3>{% translate 'آدرس ما'%}</h3>
+                            <p>{% translate 'ایران مرکزی اراک ایبک آباد شهرک صنعتی'%}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
+                        <div class="contact-info-box">
+                            <div class="icon">
+                                <i class="icofont-phone"></i>
+                            </div>
+                            <h3>{% translate 'تلفن ما'%}</h3>
+                            <p><a href="#">+123 456 7890</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<div class='container'>
+    <div class="col-lg-12 col-md-12">
+                        <form  method='post'>
+                         {% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    {{form.full_name|as_crispy_field}}
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                {{form.phone|as_crispy_field}}
+                              
+                                </div>
+
+                                <div class="col-lg-12 col-md-6">
+                               {{form.email|as_crispy_field}}
+
+                                </div>
+
+                                <div class="col-lg-12 col-md-6">
+                                {{form.subject|as_crispy_field}}
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                {{form.text|as_crispy_field}}
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="submit" class="btn btn-primary disabled" style="pointer-events: all; cursor: pointer;">ارسال پیام</button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+{% endblock %}
